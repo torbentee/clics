@@ -1,0 +1,74 @@
+# Linux
+## Bash
+Ctrl + a – go to the start of the command line
+Ctrl + e – go to the end of the command line
+Ctrl + k – delete from cursor to the end of the command line
+Ctrl + u – delete from cursor to the start of the command line
+Ctrl + w – delete from cursor to start of word (i.e. delete backwards one word)
+Ctrl + y – paste word or text that was cut using one of the deletion shortcuts (such as the one above) after the cursor
+Ctrl + xx – move between start of command line and current cursor position (and back again)
+Ctrl + t – swap character under cursor with the previous one
+Command Recall Shortcuts
+Ctrl + g – escape from history searching mode
+Alt + . – use the last word of the previous command
+Command Control Shortcuts
+
+Ctrl + l – clear the screen
+Ctrl + s – stops the output to the screen (for long running verbose command)
+Ctrl + q – allow output to the screen (if previously stopped using command above)
+
+### tmux
+s  list sessions
+$  name session
+
+c  create window
+w  list windows
+n  next window
+p  previous window
+f  find window
+,  name window
+&  kill window
+
+%  vertical split
+"  horizontal split
+
+o  swap panes
+q  show pane numbers
+x  kill pane
++  break pane into window (e.g. to select text by mouse to copy)
+-  restore pane from window
+⍽  space - toggle between layouts
+<prefix> q (Show pane numbers, when the numbers show up type the key to goto that pane)
+<prefix> { (Move the current pane left)
+<prefix> } (Move the current pane right)
+<prefix> z toggle pane zoom
+  
+## VIM
+### scrolling
+ctrl + e
+ctrl + y
+
+### markdown
+zr: reduces fold level throughout the buffer
+zR: opens all folds
+zm: increases fold level throughout the buffer
+zM: folds everything all the way
+za: open a fold your cursor is on
+zA: open a fold your cursor is on recursively
+zc: close a fold your cursor is on
+zC: close a fold your cursor is on recursively
+
+## Festplatte
+### df -h zeigt falsche Plattenbelegung an
+Ein Prozess verhindert, dass eine Datei gelöscht wird.
+Mit `lsof +L1` prüfen welcher Prozess das ist und killen/neustarten
+
+### Dateien überwachen
+[inotify › Wiki › ubuntuusers.de](https://wiki.ubuntuusers.de/inotify/)
+
+### `du` sortieren
+`du -hs * | sort -h`
+
+## Processes
+### parent process name
+`echo $(ps -o comm= $PPID)`
